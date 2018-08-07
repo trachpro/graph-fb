@@ -12,11 +12,10 @@ class App extends Component {
 
   logout = () => {
 
-    window.FB.logout( data => {
-      console.log("logout: ", data);
-    }, error => {
-      console.log("error: ", error);
-    })
+    window.FB.logout( function(response) {
+
+      console.log("response");
+    }) 
   }
 
   componentDidMount() {
